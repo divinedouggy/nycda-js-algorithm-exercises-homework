@@ -3,27 +3,38 @@
  * You're not allowed to use String.prototype.reverse().
  * Returns the new string.
  */
-function reverseString() {
 
+
+function reverseString(string) {
+  let result="";
+  for (let i = string.length-1; i >= 0; i--) {
+    result += string[i]
+  }
+  return result
 }
 
-describe('reverseString', function() {
-  const assert = require("chai").assert;
+console.log(reverseString(""))
+console.log(reverseString("a"))
+console.log(reverseString("hippopotamus"))
+console.log(reverseString("desrever si siht"))
 
-  it('should work for empty string', function() {
-    assert.equal(reverseString(""), "");
-  });
+// describe('reverseString', function() {
+//   const assert = require("chai").assert;
 
-  it('should work for single-character strings', function() {
-    assert.equal(reverseString("a"), "a");
-    assert.equal(reverseString(" "), " ");
-    assert.equal(reverseString("*"), "*");
-  });
+//   it('should work for empty string', function() {
+//     assert.equal(reverseString(""), "");
+//   });
 
-  it('should work on non-trivial strings', function() {
-    assert.equal(reverseString("cba"), "abc");
-    assert.equal(reverseString("foobar"), "raboof");
-    assert.equal(reverseString("otatop"), "potato");
-    assert.equal(reverseString("foof"), "foof");
-  });
-});
+//   it('should work for single-character strings', function() {
+//     assert.equal(reverseString("a"), "a");
+//     assert.equal(reverseString(" "), " ");
+//     assert.equal(reverseString("*"), "*");
+//   });
+
+//   it('should work on non-trivial strings', function() {
+//     assert.equal(reverseString("cba"), "abc");
+//     assert.equal(reverseString("foobar"), "raboof");
+//     assert.equal(reverseString("otatop"), "potato");
+//     assert.equal(reverseString("foof"), "foof");
+//   });
+// });
